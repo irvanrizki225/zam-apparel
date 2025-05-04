@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zam Apprel</title>
+  <!-- Google Font: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- Header -->
+  <header class="border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+      <!-- Logo -->
+      <div class="text-xl font-semibold flex justify-between items-center space-x-2">
+        <img src="img/zam.png" alt="Zam Apprel" class="h-10">  
+        <span class="text-black">Apprel</span>
+      </div>
+      
+      <!-- Navigation -->
+      <nav class="hidden md:flex space-x-6 text-sm font-medium">
+        <a href="#" class="hover:text-black">Home</a>
+        <a href="#" class="hover:text-black">Produk</a>
+        <div class="relative group">
+          <button class="hover:text-black">Kategori</button>
+          <div class="absolute hidden group-hover:block bg-white shadow-lg mt-2 py-2 w-40 z-10">
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Muslim</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Kasual</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Aksesoris</a>
+          </div>
+        </div>
+        <a href="#" class="hover:text-black">Tentang Kami</a>
+        <a href="#" class="hover:text-black">Kontak</a>
+      </nav>
+
+      <!-- Login & Cart -->
+      <div class="flex items-center space-x-4">
+        <a href="#" class="text-sm hover:underline">Login</a>
+        <a href="#" class="relative">
+          🛒
+          <span class="absolute -top-2 -right-2 bg-black text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">2</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col md:flex-row items-center">
+      <div class="md:w-1/2 text-center md:text-left">
+        <h1 class="text-3xl md:text-5xl font-bold mb-4">Fashion Muslim Modern & Elegan</h1>
+        <p class="text-gray-600 mb-6">Temukan koleksi gamis, hijab, koko, dan tunik terbaru dengan harga terjangkau.</p>
+        <a href="#" class="bg-black text-white px-6 py-3 rounded hover:bg-gray-800 transition">Belanja Sekarang</a>
+      </div>
+      <div class="md:w-1/2 mt-8 md:mt-0">
+        <img src="img/banner.jpg" alt="Fashion Muslim" class="rounded-lg shadow-lg w-full object-contain">
+      </div>
+    </div>
+  </section>
+
+  <!-- Produk Unggulan -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <h2 class="text-2xl font-semibold mb-6 text-center">Produk Unggulan</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      <!-- Card Produk (link agar bisa diklik) -->
+      <a href="#" class="group border rounded-lg p-4 text-center hover:shadow-lg transition cursor-pointer">
+        <img src="img/gamis.jpg" class="w-full h-48 object-contain rounded mb-4 group-hover:scale-105 transition-transform" alt="Gamis">
+        <h3 class="font-medium group-hover:text-black">Gamis Elegan</h3>
+        <p class="text-sm text-gray-500">Rp250.000</p>
+      </a>
+      <a href="#" class="group border rounded-lg p-4 text-center hover:shadow-lg transition cursor-pointer">
+        <img src="img/baju-koko.jpg" class="w-full h-48 object-contain rounded mb-4 group-hover:scale-105 transition-transform" alt="Koko">
+        <h3 class="font-medium group-hover:text-black">Baju Koko Premium</h3>
+        <p class="text-sm text-gray-500">Rp200.000</p>
+      </a>
+      <a href="#" class="group border rounded-lg p-4 text-center hover:shadow-lg transition cursor-pointer">
+        <img src="img/hijab.jpg" class="w-full h-48 object-contain rounded mb-4 group-hover:scale-105 transition-transform" alt="Hijab">
+        <h3 class="font-medium group-hover:text-black">Hijab Instan</h3>
+        <p class="text-sm text-gray-500">Rp75.000</p>
+      </a>
+      <a href="#" class="group border rounded-lg p-4 text-center hover:shadow-lg transition cursor-pointer">
+        <img src="img/Tunik-Stylish.jpg" class="w-full h-48 object-contain rounded mb-4 group-hover:scale-105 transition-transform" alt="Tunik">
+        <h3 class="font-medium group-hover:text-black">Tunik Stylish</h3>
+        <p class="text-sm text-gray-500">Rp180.000</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- Promo Section -->
+  <section class="bg-gray-100 py-12">
+    <div class="max-w-5xl mx-auto px-4 text-center">
+      <h2 class="text-xl font-semibold mb-4">Diskon Akhir Pekan!</h2>
+      <p class="mb-6 text-gray-600">Dapatkan potongan hingga 30% untuk koleksi muslim pilihan. Berlaku sampai Minggu ini!</p>
+      <a href="#" class="bg-black text-white px-6 py-3 rounded hover:bg-gray-800 transition">Lihat Promo</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
+      <div>
+        <div class="flex items-center mb-4">
+          <img src="img/zam.png" alt="Zam Apprel" class="h-10 mr-2">  
+          <span class="text-black font-semibold"></span>
+        </div>
+        <p class="text-gray-600">
+            ZAm Apprel adalah platform belanja online yang menyediakan berbagai produk fashion muslim berkualitas tinggi dengan harga terjangkau. Kami berkomitmen untuk memberikan pengalaman berbelanja yang menyenangkan dan memuaskan bagi pelanggan kami.
+        </p>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-2">Navigasi</h4>
+        <ul class="space-y-2 text-gray-600">
+          <li><a href="#" class="hover:underline">Home</a></li>
+          <li><a href="#" class="hover:underline">Produk</a></li>
+          <li><a href="#" class="hover:underline">Kategori</a></li>
+          <li><a href="#" class="hover:underline">Tentang Kami</a></li>
+          <li><a href="#" class="hover:underline">Kontak</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-2">Kontak</h4>
+        <p class="text-gray-600">Email: support@zam-apprel.id</p>
+        <p class="text-gray-600">Instagram: @zamapprel</p>
+        <p class="text-gray-600">WhatsApp: +62 812-3456-7890</p>
+      </div>
+    </div>
+    <div class="text-center text-gray-400 text-xs py-4 border-t">
+      &copy; 2025 ZAM Apprel. All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>
