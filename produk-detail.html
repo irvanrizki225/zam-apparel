@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zam Apprel</title>
+    <!-- Google Font: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-800">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="text-xl font-semibold flex justify-between items-center space-x-2">
+                <a href="/index.html" class="flex items-center">
+                    <img src="img/zam.png" alt="Zam Apprel" class="h-10 mr-2">
+                    <span class="text-black">Apprel</span>
+                </a>
+            </div>
+
+            <div class="md:hidden">
+                <button id="menuToggle" class="text-2xl focus:outline-none">
+                    ☰
+                </button>
+            </div>
+
+            <!-- Navigation -->
+            <nav id="mobileMenu"
+                class="md:hidden hidden absolute top-16 left-0 w-full bg-white border-t shadow z-50 text-sm font-medium flex flex-col space-y-3 px-4 py-4">
+                <a href="/index.html" class="hover:text-black">Home</a>
+                <a href="/product.html" class="hover:text-black">Produk</a>
+                <a href="#" class="hover:text-black">Kategori</a>
+                <a href="#" class="hover:text-black">Tentang Kami</a>
+                <a href="#" class="hover:text-black">Kontak</a>
+            </nav>
+
+            <nav class="hidden md:flex space-x-6 text-sm font-medium">
+                <a href="/index.html" class="hover:text-black">Home</a>
+                <a href="/product.html" class="hover:text-black">Produk</a>
+                <div class="relative group">
+                    <button class="hover:text-black">Kategori</button>
+                    <div class="absolute hidden group-hover:block bg-white shadow-lg mt-2 py-2 w-40 z-10">
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Muslim</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Kasual</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Aksesoris</a>
+                    </div>
+                </div>
+                <a href="#" class="hover:text-black">Tentang Kami</a>
+                <a href="#" class="hover:text-black">Kontak</a>
+            </nav>
+
+            <div class="relative">
+                <div class="flex items-center space-x-4">
+                    <a href="/login.html" class="text-sm hover:underline">Login</a>
+                    <button id="cartBtn" class="relative focus:outline-none">
+                        🛒
+                        <span
+                            class="absolute -top-2 -right-2 bg-black text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">2</span>
+                    </button>
+                </div>
+
+                <!-- Cart Dropdown -->
+                <div id="cartDropdown" class="hidden absolute right-0 mt-2 w-64 bg-white border rounded shadow-lg z-20">
+                    <ul class="divide-y text-sm">
+                        <li class="p-4 hover:bg-gray-100">
+                            <p class="font-medium">Gamis Elegan</p>
+                            <p class="text-xs text-gray-500">1 x Rp250.000</p>
+                        </li>
+                        <li class="p-4 hover:bg-gray-100">
+                            <p class="font-medium">Hijab Instan</p>
+                            <p class="text-xs text-gray-500">2 x Rp75.000</p>
+                        </li>
+                        <li class="p-4 hover:bg-gray-100">
+                            <p class="font-medium">Tunik Stylish</p>
+                            <p class="text-xs text-gray-500">1 x Rp180.000</p>
+                        </li>
+                    </ul>
+                    <div class="p-4 text-center">
+                        <a href="#" class="bg-black text-white px-4 py-2 rounded hover:bg-gray-800 text-sm">Lihat Daftar
+                            Cart</a>
+                    </div>
+                </div>
+            </div>
+    </header>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col md:flex-row gap-8">
+        <!-- Galeri Gambar -->
+        <div class="md:w-1/2">
+            <!-- Gambar utama -->
+            <div class="border rounded-lg overflow-hidden mb-4">
+                <img id="mainImage" src="/img/gamis.jpg" alt="Detail Gamis"
+                    class="w-full h-[400px] object-contain bg-white">
+            </div>
+
+            <!-- Thumbnail list -->
+            <div class="flex gap-2">
+                <img src="/img/gamis.jpg"
+                    class="w-20 h-20 object-contain cursor-pointer border rounded hover:ring-2 hover:ring-black"
+                    onclick="changeImage(this.src)">
+                <img src="/img/gamis.jpg"
+                    class="w-20 h-20 object-contain cursor-pointer border rounded hover:ring-2 hover:ring-black"
+                    onclick="changeImage(this.src)">
+                <img src="/img/baju-koko.jpg"
+                    class="w-20 h-20 object-contain cursor-pointer border rounded hover:ring-2 hover:ring-black"
+                    onclick="changeImage(this.src)">
+            </div>
+        </div>
+
+        <!-- Informasi Produk -->
+        <div class="md:w-1/2">
+            <h1 class="text-2xl font-semibold mb-2">Gamis Elegan</h1>
+            <p class="text-gray-600 mb-4">Gamis modern dengan bahan adem dan desain stylish. Cocok untuk acara formal
+                maupun kasual.</p>
+            <p class="text-xl font-bold mb-4">Rp250.000</p>
+
+            <!-- Pilihan Ukuran -->
+            <div class="mb-4">
+                <label class="block font-medium mb-1">Pilih Ukuran:</label>
+                <div class="flex gap-2">
+                    <button class="border px-4 py-2 rounded hover:bg-black hover:text-white transition">S</button>
+                    <button class="border px-4 py-2 rounded hover:bg-black hover:text-white transition">M</button>
+                    <button class="border px-4 py-2 rounded hover:bg-black hover:text-white transition">L</button>
+                    <button class="border px-4 py-2 rounded hover:bg-black hover:text-white transition">XL</button>
+                    <button class="border px-4 py-2 rounded hover:bg-black hover:text-white transition">XXL</button>
+                </div>
+            </div>
+
+            <!-- Stok dan Jumlah -->
+            <div class="mb-6">
+                <p class="text-sm text-green-600 mb-2">Stok Tersedia: <span class="font-medium">12</span></p>
+                <label class="block font-medium mb-1">Jumlah:</label>
+                <input type="number" min="1" value="1" class="w-20 border rounded px-2 py-1">
+            </div>
+
+            <!-- Tombol Tambah ke Keranjang -->
+            <button class="bg-black text-white px-6 py-3 rounded hover:bg-gray-800 transition w-full md:w-auto">Tambah
+                ke Keranjang</button>
+        </div>
+    </section>
+
+    <!-- Script untuk slideshow -->
+    <script>
+        function changeImage(src) {
+            document.getElementById('mainImage').src = src;
+        }
+    </script>
+
+
+    <!-- Footer -->
+    <footer class="bg-white border-t mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
+            <div>
+                <div class="flex items-center mb-4">
+                    <img src="img/zam.png" alt="Zam Apprel" class="h-10 mr-2">
+                    <span class="text-black font-semibold"></span>
+                </div>
+                <p class="text-gray-600">
+                    ZAm Apprel adalah platform belanja online yang menyediakan berbagai produk fashion muslim
+                    berkualitas tinggi dengan harga terjangkau. Kami berkomitmen untuk memberikan pengalaman berbelanja
+                    yang menyenangkan dan memuaskan bagi pelanggan kami.
+                </p>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-2">Navigasi</h4>
+                <ul class="space-y-2 text-gray-600">
+                    <li>
+                        <a href="#" class="hover:underline">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline">Produk</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline">Kategori</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline">Tentang Kami</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline">Kontak</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-2">Kontak</h4>
+                <p class="text-gray-600">Email: support@zam-apprel.id</p>
+                <p class="text-gray-600">Instagram: @zamapprel</p>
+                <p class="text-gray-600">WhatsApp: +62 812-3456-7890</p>
+            </div>
+        </div>
+        <div class="text-center text-gray-400 text-xs py-4 border-t">&copy; 2025 ZAM Apprel. All rights reserved.</div>
+    </footer>
+    <!-- Script toggle dropdown -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const btn = document.getElementById('cartBtn');
+            const dropdown = document.getElementById('cartDropdown');
+            const menuToggle = document.getElementById('menuToggle');
+            const mobileMenu = document.getElementById('mobileMenu');
+
+            btn.addEventListener('click', () => {
+                dropdown.classList.toggle('hidden');
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!btn.contains(e.target) && !dropdown.contains(e.target)) {
+                    dropdown.classList.add('hidden');
+                }
+            });
+
+            menuToggle.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        });
+    </script>
+</body>
+
+</html>

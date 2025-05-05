@@ -17,7 +17,6 @@
 </head>
 
 <body class="bg-white text-gray-800">
-
   <!-- Header -->
   <header class="sticky top-0 z-50 bg-white border-b border-gray-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
@@ -93,65 +92,34 @@
       </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="bg-gray-100">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col md:flex-row items-center">
-      <div class="md:w-1/2 text-center md:text-left">
-        <h1 class="text-3xl md:text-5xl font-bold mb-4">Fashion Muslim Modern & Elegan</h1>
-        <p class="text-gray-600 mb-6">Temukan koleksi gamis, hijab, koko, dan tunik terbaru dengan harga terjangkau.</p>
-        <a href="#" class="bg-black text-white px-6 py-3 rounded hover:bg-gray-800 transition">Belanja Sekarang</a>
-      </div>
-      <div class="md:w-1/2 mt-8 md:mt-0">
-        <img src="img/banner.jpg" alt="Fashion Muslim" class="rounded-lg shadow-lg w-full object-cover">
-      </div>
-    </div>
-  </section>
+  <!-- Login Form -->
+  <main class="max-w-md mx-auto mt-12 p-6 border rounded shadow-md">
+    <h1 class="text-2xl font-semibold mb-4 text-center">Masuk ke Akun Anda</h1>
 
-  <!-- Produk Unggulan -->
-  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <h2 class="text-2xl font-semibold mb-6 text-center">Produk Unggulan</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-      <!-- Card Produk (link agar bisa diklik) -->
-      <a href="/produk-detail.html"
-        class="group border rounded-lg p-4 text-center hover:shadow-lg transition cursor-pointer">
-        <img src="img/gamis.jpg"
-          class="w-full h-48 object-cover rounded mb-4 group-hover:scale-105 transition-transform" alt="Gamis">
-        <h3 class="font-medium group-hover:text-black">Gamis Elegan</h3>
-        <p class="text-sm text-gray-500">Rp250.000</p>
-      </a>
-      <a href="/produk-detail.html"
-        class="group border rounded-lg p-4 text-center hover:shadow-lg transition cursor-pointer">
-        <img src="img/baju-koko.jpg"
-          class="w-full h-48 object-cover rounded mb-4 group-hover:scale-105 transition-transform" alt="Koko">
-        <h3 class="font-medium group-hover:text-black">Baju Koko Premium</h3>
-        <p class="text-sm text-gray-500">Rp200.000</p>
-      </a>
-      <a href="/produk-detail.html"
-        class="group border rounded-lg p-4 text-center hover:shadow-lg transition cursor-pointer">
-        <img src="img/hijab.jpg"
-          class="w-full h-48 object-cover rounded mb-4 group-hover:scale-105 transition-transform" alt="Hijab">
-        <h3 class="font-medium group-hover:text-black">Hijab Instan</h3>
-        <p class="text-sm text-gray-500">Rp75.000</p>
-      </a>
-      <a href="/produk-detail.html"
-        class="group border rounded-lg p-4 text-center hover:shadow-lg transition cursor-pointer">
-        <img src="img/Tunik-Stylish.jpg"
-          class="w-full h-48 object-cover rounded mb-4 group-hover:scale-105 transition-transform" alt="Tunik">
-        <h3 class="font-medium group-hover:text-black">Tunik Stylish</h3>
-        <p class="text-sm text-gray-500">Rp180.000</p>
-      </a>
-    </div>
-  </section>
+    <form action="#" method="POST" class="space-y-4">
+      <div>
+        <label class="block mb-1 text-sm font-medium">Email</label>
+        <input type="email" class="w-full border rounded px-3 py-2" placeholder="email@example.com" required />
+      </div>
+      <div>
+        <label class="block mb-1 text-sm font-medium">Password</label>
+        <input type="password" class="w-full border rounded px-3 py-2" placeholder="••••••••" required />
+      </div>
+      <button type="submit" class="w-full bg-black text-white py-2 rounded hover:bg-gray-800 transition">Login</button>
+    </form>
 
-  <!-- Promo Section -->
-  <section class="bg-gray-100 py-12">
-    <div class="max-w-5xl mx-auto px-4 text-center">
-      <h2 class="text-xl font-semibold mb-4">Diskon Akhir Pekan!</h2>
-      <p class="mb-6 text-gray-600">Dapatkan potongan hingga 30% untuk koleksi muslim pilihan. Berlaku sampai Minggu
-        ini!</p>
-      <a href="#" class="bg-black text-white px-6 py-3 rounded hover:bg-gray-800 transition">Lihat Promo</a>
-    </div>
-  </section>
+    <div class="my-4 text-center text-sm text-gray-500">atau</div>
+
+    <!-- Google Login -->
+    <button class="w-full border py-2 rounded hover:bg-gray-50 flex items-center justify-center space-x-2">
+      <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" class="w-5 h-5" />
+      <span>Login dengan Google</span>
+    </button>
+
+    <p class="mt-6 text-sm text-center">Belum punya akun? <a href="register.html"
+        class="text-black font-medium hover:underline">Daftar</a></p>
+  </main>
+
 
   <!-- Footer -->
   <footer class="bg-white border-t mt-12">
@@ -162,19 +130,29 @@
           <span class="text-black font-semibold"></span>
         </div>
         <p class="text-gray-600">
-          ZAm Apprel adalah platform belanja online yang menyediakan berbagai produk fashion muslim berkualitas tinggi
-          dengan harga terjangkau. Kami berkomitmen untuk memberikan pengalaman berbelanja yang menyenangkan dan
-          memuaskan bagi pelanggan kami.
+          ZAm Apprel adalah platform belanja online yang menyediakan berbagai produk fashion muslim
+          berkualitas tinggi dengan harga terjangkau. Kami berkomitmen untuk memberikan pengalaman berbelanja
+          yang menyenangkan dan memuaskan bagi pelanggan kami.
         </p>
       </div>
       <div>
         <h4 class="font-semibold mb-2">Navigasi</h4>
         <ul class="space-y-2 text-gray-600">
-          <li><a href="#" class="hover:underline">Home</a></li>
-          <li><a href="#" class="hover:underline">Produk</a></li>
-          <li><a href="#" class="hover:underline">Kategori</a></li>
-          <li><a href="#" class="hover:underline">Tentang Kami</a></li>
-          <li><a href="#" class="hover:underline">Kontak</a></li>
+          <li>
+            <a href="#" class="hover:underline">Home</a>
+          </li>
+          <li>
+            <a href="#" class="hover:underline">Produk</a>
+          </li>
+          <li>
+            <a href="#" class="hover:underline">Kategori</a>
+          </li>
+          <li>
+            <a href="#" class="hover:underline">Tentang Kami</a>
+          </li>
+          <li>
+            <a href="#" class="hover:underline">Kontak</a>
+          </li>
         </ul>
       </div>
       <div>
@@ -184,11 +162,8 @@
         <p class="text-gray-600">WhatsApp: +62 812-3456-7890</p>
       </div>
     </div>
-    <div class="text-center text-gray-400 text-xs py-4 border-t">
-      &copy; 2025 ZAM Apprel. All rights reserved.
-    </div>
+    <div class="text-center text-gray-400 text-xs py-4 border-t">&copy; 2025 ZAM Apprel. All rights reserved.</div>
   </footer>
-
   <!-- Script toggle dropdown -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
